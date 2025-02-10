@@ -21,19 +21,10 @@ class Computer:
 
     # What methods will you need?
 
-    def refurbish(self, new_OS:str):
-        if new_OS is not None:    
-            self.operating_system = new_OS
-        if self.year_made < 2000:
-            self.price = 0
-        elif self.year_made < 2012:
-            self.price = 250
-        elif self.year_made < 2018:
-            self.price = 550
-        else:
-            self.price = 1000
 
-        
+    
+
+            
 
 
 

@@ -31,7 +31,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 **YES** 1 pt: Can successfully update the price/OS of a `Computer` contained in the inventory
 
-____ 1 pt: Program prints appropriate error messages
+**YES** 1 pt: Program prints appropriate error messages
 
 ## General Items (10 pts):
 

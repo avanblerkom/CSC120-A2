@@ -20,6 +20,7 @@ class ResaleShop:
         return self.inventory.index(computer)
     
     def sell(self, computer: Computer):
+        # call inventory.remove(...) to remove the computer from the inventory
         if computer in self.inventory:
             self.inventory.remove(computer)
             print("Item sold!")
@@ -33,6 +34,21 @@ class ResaleShop:
                 print(f'Item ID: {self.inventory.index(item)} : {item}')
         else:
             print("No inventory to display.")
+    def refurbish(self, computer:Computer, new_OS:str):
+        if computer in self.inventory:
+            if new_OS is not None:    
+                computer.operating_system = new_OS
+            if computer.year_made < 2000:
+                computer.price = 0
+            elif computer.year_made < 2012:
+                print("here")
+                computer.price = 250
+            elif computer.year_made < 2018:
+                self.price = 550
+            else:
+                computer.price = 1000
+        else:
+            print("Item not found. Please select another item to refurbish.")
 
 def main():
     computer1: Computer = Computer("1998 MacBook Pro", "Intel", 256, 16, "High Sierra", 2011, 1000)
@@ -44,8 +60,7 @@ def main():
     resaleshop.sell(computer2)
     resaleshop.print_inventory()
     print(computer1.price)
-    Computer.refurbish(computer1, "Monterey")
-    resaleshop.print_inventory()
+    resaleshop.refurbish(computer2, "Monterey")
     print(computer1.operating_system)
     print(computer1.price)
 
