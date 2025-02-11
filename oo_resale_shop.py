@@ -1,7 +1,7 @@
 from computer import *
 
 class ResaleShop:
-
+''''A class to represent a resale shop that buys and sells computers.'''
     # What attributes will it need?
     inventory = []
     
@@ -35,6 +35,7 @@ class ResaleShop:
         else:
             print("No inventory to display.")
     def refurbish(self, computer:Computer, new_OS:str):
+        # If the computer is in the inventory
         if computer in self.inventory:
             if new_OS is not None:    
                 computer.operating_system = new_OS
