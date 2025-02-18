@@ -1,7 +1,7 @@
 from computer import *
 
 class ResaleShop:
-''''A class to represent a resale shop that buys and sells computers.'''
+    ''''A class to represent a resale shop that buys and sells computers.'''
     # What attributes will it need?
     inventory = []
     
